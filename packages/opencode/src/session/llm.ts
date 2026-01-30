@@ -64,7 +64,7 @@ export namespace LLM {
     ])
     if (provider.options?.enableMeta) {
       input.model.options.metadata = {
-        user_id: `user_${Instance.project.id ?? "unknown"}_account__session_${input.sessionID}`,
+        user_session_id: `user_${Instance.project.id ?? "unknown"}_account__session_${input.sessionID}`,
         project_id: Instance.project.id,
         session_id: input.sessionID,
       }
